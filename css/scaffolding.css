@@ -1,0 +1,287 @@
+/*commento*/
+/*
+https://www.w3schools.com/colors/colors_names.asp
+*/
+/*
+https://www.w3schools.com/howto/howto_google_fonts.asp
+*/
+
+
+/*header*/
+header {
+}
+
+/*banner*/
+.background-banner{
+	background-attachment: scroll;
+	background-image: url(../img/layout/banner2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*background*/
+body.main{
+	background-image: url(../img/layout/background-2.jpg);
+	background-repeat: repeat;
+	background-position: center;
+}
+
+
+/*navbar + footer*/
+nav, footer {
+}
+
+/*active page in navbar*/
+.active-page {
+	font-weight:bold;
+}
+
+/*div*/
+div {
+}
+section {
+	margin: 1px;
+}
+
+/*aside class="d-block mx-auto float-sm-end"*/
+aside {
+  width: 100%;
+  max-width: 350px;
+  padding: 10px;
+  margin: 5px;
+  font-style: italic;
+  text-align: center;
+  background-color: lightgray;
+  border: solid;
+  border-color: gray;
+}
+/*back to top*/
+#backtotop {
+	display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: gold;
+  border-style: solid;
+  background-color: white; /* Set a background color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+}
+#backtotop:hover {
+  background-color: gold; /* Add a dark-grey background on hover */
+}
+/*index*/
+div.index{
+	width: 100%;
+	max-width: 300px;
+	padding: 10px;
+  margin: 5px;
+  background-color: lightgray;
+  border: solid;
+  border-color: darkred;
+  list-style-type: square;
+}
+ul{
+ list-style-type: inherit;
+}
+
+
+/*link*/
+a {
+	cursor:pointer;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+a.page-title{
+	font-style: italic;
+}
+
+/*span, emphasis and other elements*/
+span{
+}
+strong{
+}
+abbr{
+}
+
+/*rule elements*/
+
+/*quotes, texts and other elements*/
+q{
+}
+blockquote{
+}
+cite{
+}
+
+
+/*h1*/
+h1 {	
+}
+div.title{
+	text-align: center;
+}
+a.title{
+}
+
+/*Titles*/
+h2{
+}
+h3{
+}
+h4{
+}
+h5{
+}
+
+/*text*/
+p{
+	margin-right: 1px;
+	margin-left: 1px;
+}
+p.historical-note{
+	background-color: crimson;
+	border: solid;
+	border-color: darkred;
+}
+p.rule-note{
+	background-color: crimson;
+	border: solid;
+	border-color: darkred;
+}
+
+/*images*/
+img.banner-logo {
+	width:80%;
+	min-width: 300px;
+	max-width: 1000px;
+	margin: auto;
+}
+img.main {
+	width: 100%;
+	margin: 5px;
+}
+img.cc{
+	height: 2em;
+}
+/*class="decor d-block mx-auto float-md-end"*/
+img.decor {
+ 	border-style: dotted;
+	border-color: darkred;
+	width: 100%;
+	max-width: 450px;
+	margin: 5px;
+}
+img.decor-sm {
+ 	border-style: dotted;
+	border-color: darkred;
+	width: 100%;
+	max-width: 200px;
+	margin: 5px;
+}
+img.footer {
+	width: 50%;
+	position: relative;
+	padding-top: 1px;
+	left: 25%;
+}
+/*class="portrait d-block mx-auto float-sm-end"*/
+img.portrait {
+	width: 100%;
+	max-width: 300px;
+	margin: 5px;
+	border-style: solid;
+	border-color: gold;
+}
+img.weapon{
+
+}
+
+/*back to top (change)*/
+img.top {
+	float: right;
+	width: 60px;
+	margin: 15px;
+}
+
+/*tables*/
+th{
+	border-top: solid;
+	border-bottom: solid;
+	background-color: lightgray;
+	text-align: center;
+}
+table{
+	border-bottom: solid;
+	margin-bottom: 5px;
+}
+td{
+	border-bottom: 1px solid;
+	padding-right: 10px;
+}
+td.title{
+	font-style: italic;
+}
+table.main{
+	width:100%;
+}
+table.aside{
+}
+table.weapon{
+}
+
+/*ul and ol*/
+ol{
+}
+ul{
+}
+
+
+/*warning d-block mx-auto*/
+em.warning{
+}
+div.warning{
+	background-color: lightgoldenrodyellow;
+	background-image: url(../img/layout/warning.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border: double;
+	border-color: darkred;
+	border-width: 5px;
+	padding: 5px;
+	margin: 15px;
+	text-align: center;
+	min-width: 350px;
+	max-width: 1200px;
+	width: 90%;
+}
+/*warning d-block mx-auto float-md-end*/
+div.warning-aside{
+	background-color: lightgoldenrodyellow;
+	background-image: url(../img/layout/warning.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border: double;
+	border-color: darkred;
+	border-width: 5px;
+	padding: 5px;
+	margin: 15px;
+	text-align: center;
+	min-width: 350px;
+	width: 30%;
+}
