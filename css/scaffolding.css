@@ -26,6 +26,9 @@ body.main{
 	background-repeat: repeat;
 	background-position: center;
 }
+html, body{
+	margin: 0px;
+}
 
 
 /*navbar + footer*/
@@ -41,7 +44,8 @@ nav, footer {
 div {
 }
 section {
-	margin: 1px;
+	max-width: 750px;
+	margin: auto;
 }
 
 /*aside class="d-block mx-auto float-sm-end"*/
@@ -53,39 +57,59 @@ aside {
   font-style: italic;
   text-align: center;
   background-color: lightgray;
-  border: solid;
+  border: double;
   border-color: gray;
 }
 /*back to top*/
 #backtotop {
 	display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
+  bottom: 80px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 2; /* Make sure it does not overlap */
   border: gold;
   border-style: solid;
   background-color: white; /* Set a background color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
+  padding: 10px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
 }
 #backtotop:hover {
   background-color: gold; /* Add a dark-grey background on hover */
 }
-/*index*/
+/*back to top*/
+#breadcrumb {
+	position: fixed; /* Fixed/sticky position */
+  bottom: 20px;
+  right: 20px;
+  z-index: 3; /* Make sure it does not overlap */
+}
+.index-aside{
+
+}
+
+/*index for handbooks*/
 div.index{
-	width: 100%;
-	max-width: 300px;
-	padding: 10px;
-  margin: 5px;
-  background-color: lightgray;
-  border: solid;
-  border-color: darkred;
-  list-style-type: square;
+
+}
+ol.index {
+    counter-reset: item;
+}
+ol.index li {
+    display: block;
+    position: relative;
+}
+ol.index li:before {
+    content: counters(item, ".")")";
+    counter-increment: item;
+    position: absolute;
+    margin-right: 100%;
+    right: 10px; /* space between number and text */
+}
+/*ul and ol*/
+ol{
 }
 ul{
- list-style-type: inherit;
 }
 
 
@@ -105,7 +129,7 @@ a:hover {
 a:active {
 	text-decoration: none;
 }
-a.page-title{
+a.title{
 	font-style: italic;
 }
 
@@ -122,14 +146,28 @@ abbr{
 /*quotes, texts and other elements*/
 q{
 }
+q:before {
+  content: "«";
+}
+q:after {
+  content: "»";
+}
 blockquote{
+	margin: 2em;
 }
 cite{
+}
+cite.rm{
+	font-weight: bold;
+}
+cite.external{
 }
 
 
 /*h1*/
-h1 {	
+h1 {
+	font-size: 60px;
+	font-weight: bold;
 }
 div.title{
 	text-align: center;
@@ -139,28 +177,115 @@ a.title{
 
 /*Titles*/
 h2{
+	font-size: 50px;
+	font-weight: bold;
+	text-decoration: underline;
+	text-decoration-color: gold;
 }
 h3{
+	font-size: 40px;
+	font-weight: bold;
+	text-decoration: underline;
 }
 h4{
+	font-size: 30px;
+	font-weight: bold;
 }
 h5{
+	font-size: 20px;
+	font-weight: bold;
 }
 
 /*text*/
 p{
+	font-size: 1em;
 	margin-right: 1px;
 	margin-left: 1px;
 }
-p.historical-note{
-	background-color: crimson;
-	border: solid;
-	border-color: darkred;
+p.example-rm:before{
+	content: "Example";
+	font-weight: bold;
 }
-p.rule-note{
-	background-color: crimson;
-	border: solid;
-	border-color: darkred;
+p.example-rm{
+	margin: 1px;
+	padding: 1px;
+	font-style: italic;
+	border-left: 5px solid black;
+	background-color: floralwhite;
+}
+p.note-rm:before{
+	content: "Note: ";
+	font-weight: bold;
+}
+p.note-rm{
+	margin: 5px;
+	padding: 5px;
+	font-style: italic;
+	background-color: ivory;
+	border: solid black 1px;
+	border-radius: 5px;
+}
+p.option-rm:before{
+	content: "Option";
+	font-weight: bold;
+}
+p.option-rm{
+	margin: 1px;
+	padding: 5px;
+	background-color: darkslategray;
+	color: white;
+}
+
+/*notes popup*/
+div.note-mine{
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+	border: groove gray 6px;
+	background-color: black;
+	color: white;
+	z-index: 1;
+}
+div.note-historical{
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+	border: inset midnightblue 10px;
+	background-color:  #e6f2ff;
+	z-index: 1;
+}
+div.note-historical > a {
+	color:midnightblue;
+}
+div.note-historical > a:hover {
+	color:indigo;
+	text-decoration: underline;
+}
+div.note-warning{
+	font-style: italic;
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+	border: dashed darkgoldenrod 3px;
+	background-color: lightgoldenrodyellow;
+	background-image: url(../img/layout/warning.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	z-index: 1;
+}
+div.note-danger{
+	text-align: center;
+	color: white;
+	margin: 5px;
+	padding: 5px;
+	border: double #db1414 7px;
+	background-color: darkred;
+	background-image: url(../img/layout/exclamation-octagon-fill.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	z-index: 1;
 }
 
 /*images*/
@@ -218,36 +343,17 @@ img.top {
 }
 
 /*tables*/
-th{
-	border-top: solid;
-	border-bottom: solid;
-	background-color: lightgray;
-	text-align: center;
-}
 table{
-	border-bottom: solid;
-	margin-bottom: 5px;
-}
-td{
-	border-bottom: 1px solid;
-	padding-right: 10px;
-}
-td.title{
-	font-style: italic;
-}
-table.main{
-	width:100%;
+	margin: 5px;
 }
 table.aside{
+	float: right;
 }
-table.weapon{
-}
+/*tables' elements*/
 
-/*ul and ol*/
-ol{
-}
-ul{
-}
+
+
+
 
 
 /*warning d-block mx-auto*/
@@ -259,29 +365,11 @@ div.warning{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	border: double;
-	border-color: darkred;
-	border-width: 5px;
+	border: dashed darkgoldenrod 2px;
 	padding: 5px;
-	margin: 15px;
+	margin: 10px;
 	text-align: center;
 	min-width: 350px;
 	max-width: 1200px;
 	width: 90%;
-}
-/*warning d-block mx-auto float-md-end*/
-div.warning-aside{
-	background-color: lightgoldenrodyellow;
-	background-image: url(../img/layout/warning.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	border: double;
-	border-color: darkred;
-	border-width: 5px;
-	padding: 5px;
-	margin: 15px;
-	text-align: center;
-	min-width: 350px;
-	width: 30%;
 }
