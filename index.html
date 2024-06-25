@@ -15,38 +15,11 @@
 		<link rel="manifest" href="img/icon/site.webmanifest">
 		<!--meta-->
 		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<!--script: search function-->
-		<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function search() {
-                let input = document.getElementById('mySearch').value.toLowerCase();
-                let items = document.querySelectorAll('.nav-item');
-                items.forEach(item => {
-                    let text = item.textContent.toLowerCase();
-                    if (text.includes(input)) {
-                        item.style.display = "";
-                    } else {
-                        item.style.display = "none";
-                    }
-                });
-            }
-
-            // Get the button:
-            let mybutton = document.getElementById("backtotop");
-            // When the user scrolls down 50px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
-            function scrollFunction() {
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
-                }
-            }
-            document.getElementById('back-to-top').addEventListener('click', topFunction);
-            document.getElementById('mySearch').addEventListener('keyup', search);
-        });
-    </script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--JS-->
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="extJS.js"></script>
 	</head>
 	<body class="main">
 		<header>
@@ -60,38 +33,38 @@
 		</header>
 		<nav class="navbar sticky-top navbar-dark navbar-expand-lg bg-dark border-top border-bottom border-warning">
 		  <div class="container-fluid">
-		    <a class="navbar-brand btn btn-light" href="index.html"> <img src="img/layout/rules.png" alt="Home" height="40" class="d-inline-block align-text-top"></a>
+		    <a class="navbar-brand btn btn-light" href="index.html"> <img src="img/layout/rules.png" alt="Home" height="30" class="d-inline-block align-text-top"></a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		        <li class="nav-item">
-		          <a class="nav-link active" aria-current="page" href="#">Home</a>
+		          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="#">Introduction</a>
+		          <a class="nav-link" href="introduction.html">Introduction</a>
 		        </li>
 		        <li>
-		          <a class="nav-link" href="#">Handbooks' Index</a>
+		          <a class="nav-link" href="handbooks.html">Handbooks' Index</a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="#">Themes' Index</a>
+		          <a class="nav-link" href="themes.html">Themes' Index</a>
 		        </li>
 		        <li class="nav-item">
-		          <a class="nav-link" href="#">Tables</a>
+		          <a class="nav-link" href="tables.html">Tables</a>
 		        </li>
 		      </ul>
-		      <form class="d-flex" role="search" onsubmit="return false;">
-		        <input class="form-control me-2" type="search" id="mySearch" onkeyup="search()" placeholder="Search" aria-label="Search">
-          	<button class="btn btn-outline-danger" type="button" onclick="search()">Search</button>
-		      </form>
+		      <form class="d-flex" role="search">
+      			<input class="form-control me-2" type="search" placeholder="Summon the Librarian" aria-label="Search" onkeyup="searchpreview()" onkeypress="enterkey()">
+      			<button class="btn btn-outline-light" type="submit" onclick="searchpage()">Search</button>
+    			</form>
 		    </div>
 		  </div>
 		</nav>
 		<!--breadcrumb-->
 		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="p-1">
-			<button class="btn btn-light btn-outline-warning float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="img/layout/quickbrowsing.png" title="Quick browsing and breadcrumb" height="30"/></button>
+			<button class="btn btn-light btn-outline-warning float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="breadcrumb"><img src="img/layout/quickbrowsing.png" title="Quick browsing and breadcrumb" width="30"/></button>
 			<div class="offcanvas offcanvas-end"  data-bs-scroll="true"tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
 			  <div class="offcanvas-header bg-dark text-light">
 			    <h4 class="offcanvas-title" id="offcanvasRightLabel">Quick browsing</h4>
@@ -99,86 +72,86 @@
 			  </div>
 			  <div class="offcanvas-body">
 			  	<!-- levels: home - handbook/theme - section - rule -->
-			  	<h5>Browsing by handbook</h5>
+			  	<h5>Browsing by:</h5>
 			    <ol class="breadcrumb">
-				    <li class="breadcrumb-item"><a href="#">Home</a></li>
-				    <li class="breadcrumb-item active" aria-current="page"><a href="#">Handbook</a></li>
+				   <li class="breadcrumb-item"><a href="handbooks.html">Handbooks</a></li>
+				   <li class="breadcrumb-item active" aria-current="page"><a href="RMFRP-ChLCaL.html">Character Law & Campaign Law</a></li>
 				  </ol>
-				  <h5>Browsing by theme</h5>
 			    <ol class="breadcrumb">
-				    <li class="breadcrumb-item"><a href="#">Home</a></li>
-				    <li class="breadcrumb-item active" aria-current="page"><a href="#">Theme</a></li>
+				    <li class="breadcrumb-item"><a href="themes.html">Themes</a></li>
+				    <li class="breadcrumb-item active" aria-current="page"><a href="themes-general.html">General rules</a></li>
 				  </ol>
-				  <h5>Correlated content</h5>
-				  <ul>
-				  	<li></li>
-				  </ul>
+				  <a class="btn btn-outline-dark d-block m-1" href="advsearch.html">Search through the catalogue</a>
+				  <h5>Current page index</h5>
+				  <ol class="index-aside">
+				  	<li><a href="#about">About this Website</a></li>
+				  	<li><a href="#aboutrm">About Rolemaster</a></li>
+				  </ol>
 			  </div>
 			</div>		
 		</nav>
 		<section>
 			<div class="container">
 				<div class="row p-1">
-					<div class="col title bg-dark text-light border border-warning">
+					<div class="col title bg-light border border-dark">
 						<h1>Rolemaster</h1>
 					</div>
 				</div>
+				<div class="row bg-secondary border border-dark">
+						<img width="100%" height="200"/>
+				</div>
 				<div class="row p-1">
-					<div class="col-md bg-dark text-light border m-1">
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
-						<h2>Rules</h2>
+					<div class="col-md bg-light border border-dark m-1">
+						<h2>About this website</h2>
+						<span id="about"></span>
+						<p>This project aims to collect all Rolemaster's rules to lighten the learning process, speed the game up and make information easier to access to.</p>
+						<h3>The structure</h3>
+						<p>...</p>
+						<p>These are examples for notes that could help the reader to clarify, correct or customize the rules. Pressing the button will show a collapsable numbered card with further information.</p>
+						<div class="d-flex justify-content-evenly">
+						  <button class="btn btn-secondary m-1" type="button" data-bs-toggle="collapse" data-bs-target="#note-1" aria-expanded="false" aria-controls="note-1"><img src="img/layout/plus-lg.svg" alt="Personal note" height="30"><sup>1</sup></button>
+						  <button class="btn btn-info m-1" type="button" data-bs-toggle="collapse" data-bs-target="#hist-1" aria-expanded="false" aria-controls="hist-1"><img src="img/layout/rules.png" alt="Historical note" height="30" class="d-inline-block align-text-top"><sup>1</sup></button>
+						  <button class="btn btn-warning m-1" type="button" data-bs-toggle="collapse" data-bs-target="#warn-1" aria-expanded="false" aria-controls="warn-1"><img src="img/layout/exclamation-triangle-fill.svg" alt="Important note" height="30" class="d-inline-block align-text-top"><sup>1</sup></button>
+						  <button class="btn btn-danger m-1" type="button" data-bs-toggle="collapse" data-bs-target="#dang-1" aria-expanded="false" aria-controls="dang-1"><img src="img/layout/exclamation-octagon-fill.svg" alt="Warning note" height="30" class="d-inline-block align-text-top"><sup>1</sup></button>
+						</div>
+						<div class="collapse " id="note-1">
+							<div class="note-mine">This is a personal note to add options and homebrew rules.</div>
+						</div>
+						<div class="collapse " id="hist-1">
+							<div class="note-historical">This note adds historical context or correct historical inaccuracies.</div>
+						</div>
+						<div class="collapse " id="warn-1">
+							<div class="note-warning">This note warns about some rule's interpretation or trivial inaccuracies.</div>
+						</div>
+						<div class="collapse " id="dang-1">
+							<div class="note-danger">This note warns about major flaws or redirects to updated rules.</div>
+						</div>
+						<p>...</p>
 					</div>
-					<div class="col-md bg-dark text-light border m-1">
-						<h2>Website</h2>
+					<div class="col-md bg-light border border-dark m-1">
+						<h2>About Rolemaster</h2>
+						<span id="aboutrm"></span>
+						<p>Rolemaster was born as an expansion to D&D...</p>
+						<h3>Why Rolemaster?</h3>
+						<q>Because it's cool</q>
+						<p>...</p>
 					</div>
 				</div>
 			</div>	
 		</section>
-		<a href="#top"><button onclick="topFunction()" id="backtotop"  title="Go to top"><img height="30" src="img/layout/top.png"/></button></a>
+		<a href="#top"><button id="backtotop"  title="Go to top"><img width="30" src="img/layout/top.png"/></button></a>
 		<footer>
-			<div class="container-fluid bg-dark border-top border-warning align-text-center p-1">
+			<div class="container-fluid bg-dark border-top border-warning text-center p-1">
 				<div class="row">
 					<div class="col-auto m-auto text-light">
 						<p><img class="cc" src="img/layout/cc.png" alt="CC-BY-NC-SA" title="CC-BY-NC-SA"/> Davide Perfetti, 2024</p>
-						<!--
-						back to top arrow
-							<a href="https://www.flaticon.com/free-icons/arrows" title="arrows icons">Arrows icons created by Arslan Haider - Flaticon</a>
-						rules
-							<a href="https://www.flaticon.com/free-icons/rules" title="rules icons">Rules icons created by Freepik - Flaticon</a>
-						quick browsing
-							<a href="https://www.flaticon.com/free-icons/70-20-10-rule" title="70 20 10 rule icons">70 20 10 rule icons created by Freepik - Flaticon</a>
-						-->
+						<h5>Credits</h5>
+						<p><a href="https://www.flaticon.com/free-icons/arrows" title="arrows icons">Arrows icons created by Arslan Haider - Flaticon</a></p>
+						<p><a href="https://www.flaticon.com/free-icons/rules" title="rules icons">Navbar icon created by Freepik - Flaticon</a></p>
+						<p><a href="https://www.flaticon.com/free-icons/70-20-10-rule" title="70 20 10 rule icons">Side menu icon created by Freepik - Flaticon</a></p>
 					</div>
 				</div>
 			</div>
 		</footer>
-		<!--aside
-		<aside>
-			<p>Aside content</p>
-		</aside>
-		active -->
-	<!--JS-->
-	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-	<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>-->
 	</body>
 </html>
