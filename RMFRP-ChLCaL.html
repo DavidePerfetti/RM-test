@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--comment-->
+	<head>
+		<title>Rolemaster | ChLCaL</title>
+		<!--Font-->
+		<!--bootstrap CSS-->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+		<!--personal CSS-->
+		<link rel="stylesheet" href="css/scaffolding.css"/>
+		<!--icon CSS-->
+		<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+		<link rel="manifest" href="img/icon/site.webmanifest">
+		<!--meta-->
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--JS-->
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="extJS.js"></script>
+	</head>
+	<body class="main">
+		<header>
+			<span id="top"></span>
+			<!--banner-->
+			<div class="container-fluid background-banner p-5">
+				<div class="row">
+					<img class="banner-logo" src="img/layout/banner-brand.png">
+				</div>
+			</div>
+		</header>
+		<nav class="navbar sticky-top navbar-dark navbar-expand-lg bg-dark border-top border-bottom border-warning">
+		  <div class="container-fluid">
+		    <a class="navbar-brand btn btn-light" href="index.html"> <img src="img/layout/rules.png" alt="Home" height="30" class="d-inline-block align-text-top"></a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="introduction.html">Introduction</a>
+		        </li>
+		        <li>
+		          <a class="nav-link" href="handbooks.html">Handbooks' Index</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="themes.html">Themes' Index</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="tables.html">Tables</a>
+		        </li>
+		      </ul>
+		      <form class="d-flex" role="search">
+      			<input class="form-control me-2" type="search" placeholder="Summon the Librarian" aria-label="Search" onkeyup="searchpreview()" onkeypress="enterkey()">
+      			<button class="btn btn-outline-light" type="submit" onclick="searchpage()">Search</button>
+    			</form>
+		    </div>
+		  </div>
+		</nav>
+		<!--breadcrumb-->
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="p-1">
+			<button class="btn btn-light btn-outline-warning float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="breadcrumb"><img src="img/layout/quickbrowsing.png" title="Quick browsing and breadcrumb" width="30"/></button>
+			<div class="offcanvas offcanvas-end"  data-bs-scroll="true"tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+			  <div class="offcanvas-header bg-dark text-light">
+			    <h4 class="offcanvas-title" id="offcanvasRightLabel">Quick browsing</h4>
+			    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			  </div>
+			  <div class="offcanvas-body">
+			  	<!-- levels: home - handbook/theme - section - rule -->
+			  	<h5>Browsing by:</h5>
+			    <ol class="breadcrumb">
+			    	<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				    <li class="breadcrumb-item"><a href="handbooks.html">Handbooks</a></li>
+				    <li class="breadcrumb-item active" aria-current="page"><a href="RMFRP-ChLCaL.html">Character Law & Campaign Law</a></li>
+				  </ol>
+			    <ol class="breadcrumb">
+			    	<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				    <li class="breadcrumb-item"><a href="themes.html">Themes</a></li>
+				    <li class="breadcrumb-item active" aria-current="page"><a href="themes-general.html">General rules</a></li>
+				  </ol>
+				  <a class="btn btn-outline-dark d-block m-1" href="advsearch.html">Search through the catalogue</a>
+				  <h5>Current page index</h5>
+				  <ol class="index-aside">
+				  	<li><a href="#ind-1">Table of contents</a></li>
+				  	<ul>
+				  		<li><a href="#ind-1.1">Charts</a></li>
+				  	</ul>
+				  	<li><a href="#ind-2">Character Law table of contents</a></li>
+				  	<li><a href="#ind-3">Campaign Law table of contents</a></li>
+				  	<ul>
+				  		<li><a href="#ind-3.1">Charts</a></li>
+				  	</ul>
+				  </ol>
+				  <h5>Correlated content</h5>
+				  <ul>
+				  	<li><a href="#">Arms Law & Claw Law</a></li>
+				  	<li><a href="#">Spell Law</a></li>
+				  	<li><a href="#">Standard Rules</a></li>
+				  </ul>
+			  </div>
+			</div>		
+		</nav>
+		<section>
+			<div class="container">
+				<div class="row p-1">
+					<div class="col title bg-light border border-dark">
+						<h1>Character Law & Campaign Law</h1>
+					</div>
+				</div>
+				<div class="row p-1">
+					<div class="col bg-light border border-dark m-1 index">
+						<p>The <cite>Character Law & Campaign Law</cite> is the main rulebook for Rolemaster Fantasy Role-playing system (RMFRP).</p>
+						<h2>Index</h2>
+						<p><a href="RMFRP-ChLCaL-credits.html">Credits</a></p>
+						<h3>Table of contents</h3>
+						<span id="ind-1"></span>
+						<ol class="index">
+							<li><a href="RMFRP-ChLCaL-A01.html">Introduction</a>
+								<ol class="index">
+									<li><a href="RMFRP-ChLCaL-A01.html#1.1">What is Fantasy Role-playing</a></li>
+									<li><a href="RMFRP-ChLCaL-A01.html#1.2">How to use Rolemaster</a></li>
+								</ol>
+							</li>
+							<li><a>Character Law</a></li>
+							<li><a>Campaign Law</a></li>
+							<li><a>Arms Law & Claw Law</a></li>
+							<li><a>Spell Law</a></li>
+							<li><a>Other Play Aids</a></li>
+							<li><a>Other RM Material</a>
+								<ol class="index">
+									<li><a>Healing, Injuries and Death</a>
+										<ol class="index">
+											<li><a>Healing</a></li>
+											<li><a>Death</a></li>
+											<li><a>Injuries</a></li>
+											<li><a>Disease</a></li>
+											<li><a>Poisons</a></li>
+										</ol>
+									</li>
+									<li><a>Movement, Encumbrance and Exhaustion</a>
+										<ol class="index">
+											<li><a>Movement</a></li>
+											<li><a>Encumbrance</a></li>
+											<li><a>Exhaustion</a></li>
+											<li><a>Summary</a></li>
+										</ol>
+									</li>
+									<li><a>Equipment and Commerce</a>
+										<ol class="index">
+											<li><a>Coinage standards</a></li>
+											<li><a>Computing prices</a></li>
+											<li><a>Base cost multipliers</a></li>
+											<li><a>Set costs for special/magical properties</a></li>
+											<li><a>Purchase and resale of goods</a></li>
+											<li><a>Price charts</a></li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+						</ol>
+						<h4>Charts</h4>
+						<span id="ind-1.1"></span>
+						<ul>
+							<li><a>Healing recovery chart</a></li>
+							<li><a>Poison chart</a></li>
+							<li><a>Disease chart</a></li>
+							<li><a>Movement rate chart</a></li>
+							<li><a>Stride modification chart</a></li>
+							<li><a>Pace chart</a></li>
+							<li><a>Pace limitations chart</a></li>
+							<li><a>Encumbrance chart</a></li>
+							<li><a>Combat exhaustion chart</a></li>
+							<li><a>Exhaustion modifier chart</a></li>
+							<li><a>Weight decreases due to material and design</a></li>
+							<li><a>Bonuses due to special material and magic</a></li>
+							<li><a>Bonuses due to heavier design</a></li>
+							<li><a>Spell bonus costs</a></li>
+							<li><a>Spell bonus costs multipliers</a></li>
+							<li><a>Imbedded spell cost multipliers</a></li>
+							<li><a>Imbedding costs</a></li>
+							<li><a>Purchase and resale price chart</a></li>
+							<li><a>Accessory price chart</a></li>
+							<li><a>Armor price chart</a></li>
+							<li><a>Base spell item price chart</a></li>
+							<li><a>Food, lodging and services price chart</a></li>
+							<li><a>Transport price chart</a></li>
+							<li><a>Weapon price chart</a></li>
+							<li><a>Enchanted herbs, breads, and poison price chart</a></li>
+						</ul>
+						<h3>Character Law table of contents</h3>
+						<span id="ind-2"></span>
+						<ol class="index">
+							<li><a>Character Law introduction</a>
+								<ol class="index">
+									<li><a>Key features of Character Law</a></li>
+									<li><a>Definitions and convetions</a></li>
+									<li><a>How to use Character Law</a></li>
+								</ol>
+							</li>
+							<li><a>Mental and Physical characteristics</a>
+								<ol class="index">
+									<li><a>Temporary and Potentials stats</a></li>
+									<li><a>Development stats</a></li>
+									<li><a>Primary stats</a></li>
+									<li><a>Stat bonuses</a>
+										<ol class="index">
+											<li><a>Defensive Bonus</a></li>
+											<li><a>Maneuvers</a></li>
+											<li><a>Hit Points</a></li>
+											<li><a>Resistance Rolls</a></li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+							<li><a>Skill and Ranks</a>
+								<ol class="index">
+									<li><a>Skill rank bonuses</a></li>
+									<li><a>Skill rank development</a>
+										<ol class="index">
+											<li><a>Development Points</a></li>
+											<li><a>Skill development cost</a></li>
+										</ol>
+									</li>
+									<li><a>Resolving actions affected by skills</a>
+										<ol class="index">
+											<li><a>Moving Maneuvers</a></li>
+											<li><a>Static Maneuvers</a></li>
+											<li><a>Offensive Bonuses</a></li>
+											<li><a>Special purpose bonuses</a></li>
+											<li><a>Canceling action</a></li>
+										</ol>
+									</li>
+									<li><a>Maneuvering in armor skills (MM)</a>
+										<ol class="index">
+											<li><a>Soft leather</a></li>
+											<li><a>Rigid leather</a></li>
+											<li><a>Chain</a></li>
+											<li><a>Plate</a></li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+						</ol>
+						<h3>Campaign Law table of contents</h3>
+						<span id="ind-3"></span>
+						<ol class="index">
+							<li><a>Introduction</a></li>
+							<li><a>Setting up a Campaign</a></li>
+						</ol>
+						<h4>Charts</h4>
+						<span id="ind-3.1"></span>
+						<ul>
+							<li><a>Standard precipitation chart</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>	
+		</section>
+		<a href="#top"><button id="backtotop"  title="Go to top"><img width="30" src="img/layout/top.png"/></button></a>
+		<footer>
+			<div class="container-fluid bg-dark border-top border-warning text-center p-1">
+				<div class="row">
+					<div class="col-auto m-auto text-light">
+						<p><img class="cc" src="img/layout/cc.png" alt="CC-BY-NC-SA" title="CC-BY-NC-SA"/> Davide Perfetti, 2024</p>
+						<h5>Credits</h5>
+						<p><a href="https://www.flaticon.com/free-icons/arrows" title="arrows icons">Arrows icons created by Arslan Haider - Flaticon</a></p>
+						<p><a href="https://www.flaticon.com/free-icons/rules" title="rules icons">Navbar icon created by Freepik - Flaticon</a></p>
+						<p><a href="https://www.flaticon.com/free-icons/70-20-10-rule" title="70 20 10 rule icons">Side menu icon created by Freepik - Flaticon</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

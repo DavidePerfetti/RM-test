@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Home",
+        "url": "index.html",
+        "content": "Welcome to the Rolemaster main page. Here you will find...",
+        "tags": ["main", "welcome"]
+    },
+    {
+        "title": "Introduction",
+        "url": "introduction.html",
+        "content": "This section introduces you to the Rolemaster system. Rolemaster is...",
+        "tags": ["introduction", "system"]
+    },
+    {
+        "title": "Handbooks' Index",
+        "url": "handbooks.html",
+        "content": "Find all handbooks here. The handbooks cover various topics including...",
+        "tags": ["handbooks", "topics"]
+    },
+    {
+        "title": "Character Law & Campaign Law, Index",
+        "url": "RMFRP-ChLCaL.html",
+        "content": "...",
+        "tags": ["handbooks"]
+    },
+    {
+        "title": "Themes' index",
+        "url": "themes.html",
+        "content": "Themes' Index. Explore different themes and settings in the Rolemaster universe.",
+        "tags": ["themes", "settings"]
+    },
+    {
+        "title": "Theme: General rules",
+        "url": "themes-general.html",
+        "content": "T...",
+        "tags": ["themes", "general rules", "system"]
+    },
+    {
+        "title": "Tables",
+        "url": "tables.html",
+        "content": "Tables. Access various tables used in Rolemaster for gameplay and reference.",
+        "tags": ["tables", "gameplay"]
+    }
+]

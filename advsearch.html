@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--comment-->
+	<head>
+		<title>Rolemaster | Librarian's Catalogue </title>
+		<!--Font-->
+		<!--bootstrap CSS-->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+		<!--personal CSS-->
+		<link rel="stylesheet" href="css/scaffolding.css"/>
+		<!--icon CSS-->
+		<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+		<link rel="manifest" href="img/icon/site.webmanifest">
+		<!--meta-->
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--JS-->
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="extJS.js"></script>
+	</head>
+	<body class="main">
+		<header>
+			<span id="top"></span>
+			<!--banner-->
+			<div class="container-fluid background-banner p-5">
+				<div class="row">
+					<img class="banner-logo" src="img/layout/banner-brand.png">
+				</div>
+			</div>
+		</header>
+		<nav class="navbar sticky-top navbar-dark navbar-expand-lg bg-dark border-top border-bottom border-warning">
+		  <div class="container-fluid">
+		    <a class="navbar-brand btn btn-light" href="index.html"> <img src="img/layout/rules.png" alt="Home" height="30" class="d-inline-block align-text-top"></a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="introduction.html">Introduction</a>
+		        </li>
+		        <li>
+		          <a class="nav-link" href="handbooks.html">Handbooks' Index</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="themes.html">Themes' Index</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="tables.html">Tables</a>
+		        </li>
+		      </ul>
+		      <form class="d-flex" role="search">
+      			<input class="form-control me-2" type="search" placeholder="Summon the Librarian" aria-label="Search" onkeyup="searchpreview()" onkeypress="enterkey()">
+      			<button class="btn btn-outline-light" type="submit" onclick="searchpage()">Search</button>
+    			</form>
+		    </div>
+		  </div>
+		</nav>
+		<!--breadcrumb-->
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="p-1">
+			<button class="btn btn-light btn-outline-warning float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="breadcrumb"><img src="img/layout/quickbrowsing.png" title="Quick browsing and breadcrumb" width="30"/></button>
+			<div class="offcanvas offcanvas-end"  data-bs-scroll="true"tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+			  <div class="offcanvas-header bg-dark text-light">
+			    <h4 class="offcanvas-title" id="offcanvasRightLabel">Quick browsing</h4>
+			    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			  </div>
+			  <div class="offcanvas-body">
+			  	<!-- levels: home - handbook/theme - section - rule -->
+			  	<h5>Browsing by:</h5>
+			    <ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><a href="advsearch.html">Librarian's Catalogue (advanced research)</a></li>
+				</ol>
+				<button type="button" class="btn btn-outline-dark d-block w-100 m-1" disabled>Already in the catalogue</button>
+				<h5>Instructions</h5>
+					<p></p>  
+			  </div>
+			</div>		
+		</nav>
+		<section>
+			<div class="container-fluid">
+				<div class="row p-1">
+					<div class="col title bg-light border border-dark">
+						<h1>Librarian's Catalogue</h1>
+					</div>
+				</div>
+				<div class="row p-1">
+					<div class="col-md-3 bg-dark border border-dark m-1 index p-1">
+						<div class="input-group mb-3">
+						  <span class="input-group-text" id="basic-addon1">Keyword</span>
+						  <input type="text" class="form-control" placeholder="Search..." aria-label="Type in Keyword" aria-describedby="basic-addon1" id="advsearch" onkeyup="advfilter()">
+						</div>
+						<div class="input-group mb-3">
+						  <span class="input-group-text" id="basic-addon2">Tag</span>
+						  <input type="text" class="form-control" placeholder="Search..." aria-label="Type in Keyword" aria-describedby="basic-addon2" id="tagsearch" onkeyup="tagfilter()">
+						</div>
+					</div>
+					<div class="col-md bg-light border border-dark m-1 p-1 index">
+						<ul class="list-group" id="catalogue">
+							<li class="list-group-item">
+						  		<h5>Character Law & Campaign Law, Index</h5>
+						  		<p>etc</p>
+						  	</li>
+  							<li class="list-group-item">
+  								<h5>Theme: General rules</h5>
+						  		<p>etc</p>
+  							</li>
+						  	<li class="list-group-item">
+						  		<h5>Introduction</h5>
+						  		<p>etc</p>
+						  	</li>
+						  	<li class="list-group-item">
+						  		<h5>Handbooks' Index</h5>
+						  		<p>etc</p>
+						  	</li>
+						  	<li class="list-group-item">
+						  		<h5>Themes' index</h5>
+						  		<p>etc</p>
+						  	</li>
+						  	<li class="list-group-item">
+						  		<h5>Tables</h5>
+						  		<p>etc</p>
+						  	</li>
+						</ul>
+					</div>
+				</div>
+			</div>	
+		</section>
+		<a href="#top"><button id="backtotop"  title="Go to top"><img width="30" src="img/layout/top.png"/></button></a>
+		<footer>
+			<div class="container-fluid bg-dark border-top border-warning text-center p-1">
+				<div class="row">
+					<div class="col-auto m-auto text-light">
+						<p><img class="cc" src="img/layout/cc.png" alt="CC-BY-NC-SA" title="CC-BY-NC-SA"/> Davide Perfetti, 2024</p>
+						<h5>Credits</h5>
+						<p><a href="https://www.flaticon.com/free-icons/arrows" title="arrows icons">Arrows icons created by Arslan Haider - Flaticon</a></p>
+						<p><a href="https://www.flaticon.com/free-icons/rules" title="rules icons">Navbar icon created by Freepik - Flaticon</a></p>
+						<p><a href="https://www.flaticon.com/free-icons/70-20-10-rule" title="70 20 10 rule icons">Side menu icon created by Freepik - Flaticon</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

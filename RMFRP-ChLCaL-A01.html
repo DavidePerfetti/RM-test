@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--comment-->
+	<head>
+		<title>Rolemaster | ChLCaL - Credits</title>
+		<!--Font-->
+		<!--bootstrap CSS-->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+		<!--personal CSS-->
+		<link rel="stylesheet" href="css/scaffolding.css"/>
+		<!--icon CSS-->
+		<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+		<link rel="manifest" href="img/icon/site.webmanifest">
+		<!--meta-->
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--JS-->
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="extJS.js"></script>
+	</head>
+	<body class="main">
+		<header>
+			<span id="top"></span>
+			<!--banner-->
+			<div class="container-fluid background-banner p-5">
+				<div class="row">
+					<img class="banner-logo" src="img/layout/banner-brand.png">
+				</div>
+			</div>
+		</header>
+		<nav class="navbar sticky-top navbar-dark navbar-expand-lg bg-dark border-top border-bottom border-warning">
+		  <div class="container-fluid">
+		    <a class="navbar-brand btn btn-light" href="index.html"> <img src="img/layout/rules.png" alt="Home" height="30" class="d-inline-block align-text-top"></a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="introduction.html">Introduction</a>
+		        </li>
+		        <li>
+		          <a class="nav-link active" href="handbooks.html">Handbooks' Index</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="themes.html">Themes' Index</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="tables.html">Tables</a>
+		        </li>
+		      </ul>
+		      <form class="d-flex" role="search">
+      			<input class="form-control me-2" type="search" placeholder="Summon the Librarian" aria-label="Search" onkeyup="searchpreview()" onkeypress="enterkey()">
+      			<button class="btn btn-outline-light" type="submit" onclick="searchpage()">Search</button>
+    			</form>
+		    </div>
+		  </div>
+		</nav>
+		<!--breadcrumb-->
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="p-1">
+			<button class="btn btn-light btn-outline-warning float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="breadcrumb"><img src="img/layout/quickbrowsing.png" title="Quick browsing and breadcrumb" width="30"/></button>
+			<div class="offcanvas offcanvas-end"  data-bs-scroll="true"tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+			  <div class="offcanvas-header bg-dark text-light">
+			    <h4 class="offcanvas-title" id="offcanvasRightLabel">Quick browsing</h4>
+			    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			  </div>
+			  <div class="offcanvas-body">
+			  	<!-- levels: home - handbook/theme - section - rule -->
+			  	<h5>Browsing by:</h5>
+			    <ol class="breadcrumb">
+			    	<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				    <li class="breadcrumb-item"><a href="handbooks.html">Handbooks</a></li>
+				    <li class="breadcrumb-item" aria-current="page"><a href="RMFRP-ChLCaL.html">Character Law & Campaign Law</a></li>
+				    <li class="breadcrumb-item active" aria-current="page"><a href="RMFRP-ChLCaL-A01.html">Introduction</a></li>
+				</ol>
+			    <ol class="breadcrumb">
+			    	<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				    <li class="breadcrumb-item"><a href="themes.html">Themes</a></li>
+				    <li class="breadcrumb-item active" aria-current="page"><a href="themes-general.html">General rules</a></li>
+				  </ol>
+				  <a class="btn btn-outline-dark d-block m-1" href="advsearch.html">Search through the catalogue</a>
+				  <h5>Current page index</h5>
+				  <ol class="index-aside">
+				  	<li><a href="#1">Introduction</a></li>
+				  	<ol>
+				  		<li><a href="#1.1">What is Fantasy Role playing?</a></li>
+				  		<li><a href="#1.2">How to use Rolemaster</a></li>
+				  	</ol>
+				  </ol>
+				  <h5>Correlated content</h5>
+				  <ul>
+				  	<li><a href="#">...</a></li>
+				  	<li><a href="#">...</a></li>
+				  	<li><a href="#">...</a></li>
+				  </ul>
+			  </div>
+			</div>		
+		</nav>
+		<section>
+			<div class="container">
+				<div class="row p-1">
+					<div class="col title bg-light border border-dark">
+						<h1>Character Law & Campaign Law</h1>
+					</div>
+				</div>
+				<div class="row p-1">
+					<div class="col bg-light border border-dark p-1">
+						<h2>Introduction</h2>
+						<span id="1"></span>
+						<p><cite class="rm">Rolemaster<sup>TM</sup></cite> is designed to be used as a complete advanced fantasy role playing (FRP) system or as individual component systems: <a href="RMFRP-ArLClL.html"><cite>Arms Law<sup>&reg;</sup> & Claw Law<sup>&reg;</sup></cite></a>, <a href="RMFRP-ChLCaL.html"><cite>Character Law & Campaing Law<sup>&reg;</sup></cite></a>, and <a href="RMFRP-SpL.html"><cite>Spell Law<sup>&reg;</sup></cite></a>. It is suitable for experienced gamers who want guidelines and material to inject into their own existing game systems and world systems, as well as for those who are looking for a realistic yet playable fantasy role playing system. It contains complete rules for handling most of the situations that arise in FRP games. A variety of tables add a great deal of flavor and detail to a game without significantly decreasing playability.</p>
+						<p><abbr title="Iron Crown Enterprises">ICE</abbr>'s individual component <cite class="rm">Rolemaster</cite> systems provide a combat system, a spell system, a character development system, and guidelines for running a campaign game (larger scale game). These systems allow a Gamemaster to expand an existing system by gradually inserting components. Such a process can increase the variations and options available to the Gamemaster and the players without forcing an abrupt transition to a new game systema. A brief description of each component system is presented in <cite class="rm">Rolemaster</cite> Sections <a href="RMFRP-ChLCaL-A02.html">2.0</a>-<a href="RMFRP-ChLCaL-A05.html">5.0</a>.</p>
+						<p><cite class="rm">Rolemaster</cite> Sections <a href="RMFRP-ChLCaL-A01.html#1.1">1.1</a> and<a href="RMFRP-ChLCaL-A01.html#1.2">1.2</a> are meant to be an introduction for someone who is unfamiliar with the concept of fantasy role playing. More experienced readers may want to skip these two sections, but the novice should read them carefully.
+						<p class="note-rm">for readability purposes, <cite class="rm">Rolemaster</cite> uses standard masculine pronouns when referring to persons of uncertain gender. In such cases, these pronouns are intended to convey the meanings: he/she, her/his, etc.</p>
+						<h3>What is Fantasy Role-playing?</h3>
+						<span id="1.1"></span>
+						<p>The easiest way to understand a role playing game is to think of it as a work of fiction such as a novel or a play or a movie. In a novel the author determines the setting of the novel along with the actions of all of the characters and thus the plot. In a role playing game, the author (called the Gamemaster) determines the setting and some of the basic elements of the plot. The actions of the characters (and thus part of the plot) are determined during the game by the game "players" and the Gamemaster. Each "player" controls the actions of his "player character" or alter ego, while the Gamemas-ter controls the actions of all of the other characters (called non-player characters). Thus each player assumes the role of (role plays) his character and the Gamemaster role plays the non-player characters. A fantasy role playing game is a "living" novel where interaction between the actors (characters) creates a constantly evolving plot.</p>
+						<p>The Gamemaster also makes sure that all characters perform actions which are possible only within the framework of the setting that he has developed (his "fantasy" world). In a sense, the Gamemaster acts as a referee. This is where the "fantasy" part and the "game" part come into the definition of a fantasy role playing game. A Gamemaster creates a setting which is not limited by the realities of our world; thus, the setting falls into the genre of fiction known as "fantasy". However, the Gamemaster commonly uses a set of "rules" which define and control the physical realities of his fantasy world. Using these rules turns the role playing "novel" into a game.</p>
+						<p>Thus, a fantasy role playing (FRP) game is set in a fantasy world whose reality is not defined solely by our world, but instead is defined by a set of game rules. The creation of the plot of a FRP game is an on-going process which both the Gamemaster and players may affect, but which neither controls. The plot is partially determined along with the setting, but it is heavily influenced by the interaction of the characters with one another and and random events.</p>
+						<p>Since fantasy role playing is a game, it should be interesting, exciting, and challenging. One of the main objectives of a FRP game is for each player to take on the persona of his (or her) player character, reacting to situations as the character would. This is the biggest difference between FRP games and other games such as chess or bridge. A player's character is not just a piece or a card; in a good FRP game, a player places himself in his character's position. The Gamemaster uses detailed descriptions, drawings and maps to help the players visualize the physical settings and other characters. In addition, each player character should speak and react to the other players as his character would. All of this creates an air of involvement, excitement, and realism (in a fantasy setting of course).</p> 
+						<p>The Gamemaster has been described as "author" of the FRP game; actually, he functions as more than this. The Gamemaster not only describes everything which occurs in the game as if it were really happening to the player characters, but he also acts as a referee or judge for situations in which the actions attempted by characters must be resolved. The Gamemaster has to do a lot of preparation before the game is actually played. He must develop the setting and scenarios for the play of the game, using the game rules and material of his own design (or commercially available play aids). Until the players encounter certain situations during play, some material concerning the setting and the scenario is known only to the Gamemaster. In addition, the Gamemaster plays the roles of all of the characters and creatures who are not player characters, but nontheless move and act within the game setting, affecting play.</p> 
+						<p>Each player develops and creates a character using the rules of the game and the help of the Gamemaster (for the character's background and history). Each player character has certain nu-merical ratings for his attributes, capabilities and skills. These ratings depend upon how the player develops his character using the rules of the game. Ratings determine how much of a chance the character has of accomplishing certain actions. Many of the actions that characters attempt during play have a chance of success and a chance of failure. Therefore, even though actions are initiated by the Gamernaster and the players during the game, the success or failure of these actions is determined by the rules, the characters' ratings, and the random actor of a. roll of the dice.</p> 
+						<p>Finally, a fantasy role playing game deals with adventure, magic, action, danger, combat, treasure, heroes, villains, life and death. In short, in a FRP game the players leave the real world behind for a while, and enter a world where the fantastic is real and reality is limited only by the imagination of the Gamemaster and the players themselves.</p>
+						<h3>How to use Rolemaster</h3>
+						<span id="1.2"></span>
+						<p><cite class="rm">Rolemaster</cite> has 5 separately indexed sets of rules:</p>
+						<div class="table-responsive-sm">
+							<table class="table table-hover aling-middle table-striped table-borderless table-sm">
+								<tbody>
+									<tr>
+										<td><a href="RMFRP-ArLClL.html"><cite>Arms Law & Claw Law</cite></a></td>
+										<td>(<cite><abbr title="Arms Law & Claw Law">AL</abbr></cite> or <cite><abbr title="Arms Law & Claw Law">AL/CL</abbr></cite> or <cite><abbr title="Arms Law & Claw Law">AL&CL</abbr></cite>)</td>
+									</tr>
+									<tr>
+										<td><a href="RMFRP-SpL.html"><cite>Spell Law</cite></a></td>
+										<td>(<cite><abbr title="Spell Law">SL</abbr></cite>)</td>
+									</tr>
+									<tr>
+										<td><a href="RMFRP-ChLCaL.html#ind-2"><cite>Character Law</cite></a></td>
+										<td>(<cite><abbr title="Character Law">ChL</abbr></cite>)</td>
+									</tr>
+									<tr>
+										<td><a href="RMFRP-ChLCaL.html#ind-3"><cite>Campaign Law</cite></a></td>
+										<td>(<cite><abbr title="Spell Law">CaL</abbr></cite> or <cite><abbr title="Spell Law">CpL</abbr></cite>)</td>
+									</tr>
+									<tr>
+										<td><cite class="rm"><a href="RMFRP-ChLCaL-A01.html">Rolemaster<a></cite></td>
+										<td>(<cite><abbr title="Rolemaster">RM</abbr></cite>)</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<button class="btn btn-secondary m-1 float-end" type="button" data-bs-toggle="collapse" data-bs-target="#note-1" aria-expanded="false" aria-controls="note-1"><img src="img/layout/plus-lg.svg" alt="Personal note" height="30"><sup>1</sup></button>
+						<p>In general, a specific rules "section" in <cite>Rolemaster</cite> is referenced by using the abbreviation for the appropriate set of rules, the word "Section", and the appropriate section number (or numbers or range of numbers). For example, this text is in <a href="RMFRP-ChLCaL-A01.html#1.2">RM Section 1.2</a>. If a section is referenced without an abbreviation, that section can be found in the same set of rules as the reference. For example, this text is in Section <a href="#1.2">1.2</a>.</p>
+						<div class="collapse " id="note-1">
+							<div class="note-mine">If a link specify the set of rules or handbook, then it will lead to a section in a different handbook. Otherwise it refers to the same set of rules you are consulting.</div>
+						</div>
+						<p></p>
+					</div>
+				</div>
+			</div>	
+		</section>
+		<a href="#top"><button id="backtotop"  title="Go to top"><img width="30" src="img/layout/top.png"/></button></a>
+		<footer>
+			<div class="container-fluid bg-dark border-top border-warning text-center p-1">
+				<div class="row">
+					<div class="col-auto m-auto text-light">
+						<p><img class="cc" src="img/layout/cc.png" alt="CC-BY-NC-SA" title="CC-BY-NC-SA"/> Davide Perfetti, 2024</p>
+						<h5>Credits</h5>
+						<p><a href="https://www.flaticon.com/free-icons/arrows" title="arrows icons">Arrows icons created by Arslan Haider - Flaticon</a></p>
+						<p><a href="https://www.flaticon.com/free-icons/rules" title="rules icons">Navbar icon created by Freepik - Flaticon</a></p>
+						<p><a href="https://www.flaticon.com/free-icons/70-20-10-rule" title="70 20 10 rule icons">Side menu icon created by Freepik - Flaticon</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
