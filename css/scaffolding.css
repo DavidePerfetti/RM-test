@@ -93,11 +93,12 @@ div.nav-arrows{
 	z-index: 2;
 	position: fixed; /* Fixed/sticky position */
 	bottom: 1%;
-  right: 40%;
-  width: 20%;
+  right: 25%;
+  width: 50%;
+  border: black solid 1px;
 }
 button.nav-arrows{
-	margin: 5px;
+	margin: auto;
 	padding: 10px;
 	border:  #6cc3f9;
   border-style: solid;
