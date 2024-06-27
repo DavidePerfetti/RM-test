@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--comment-->
+	<head>
+		<title>Rolemaster | ChLCaL - 2.0-5.0 RM material</title>
+		<!--Font-->
+		<!--bootstrap CSS-->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+		<!--personal CSS-->
+		<link rel="stylesheet" href="css/scaffolding.css"/>
+		<!--icon CSS-->
+		<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+		<link rel="manifest" href="img/icon/site.webmanifest">
+		<!--meta-->
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--JS-->
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="extJS.js"></script>
+	</head>
+	<body class="main">
+		<header>
+			<span id="top"></span>
+			<!--banner-->
+			<div class="container-fluid background-banner p-5">
+				<div class="row">
+					<img class="banner-logo" src="img/layout/banner-brand.png">
+				</div>
+			</div>
+		</header>
+		<nav class="navbar sticky-top navbar-dark navbar-expand-lg bg-dark border-top border-bottom border-warning">
+		  <div class="container-fluid">
+		    <a class="navbar-brand btn btn-light" href="index.html"> <img src="img/layout/rules.png" alt="Home" height="30" class="d-inline-block align-text-top"></a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		        <li class="nav-item">
+		          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="introduction.html">Introduction</a>
+		        </li>
+		        <li>
+		          <a class="nav-link active" href="handbooks.html">Handbooks' Index</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="themes.html">Themes' Index</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="tables.html">Tables</a>
+		        </li>
+		      </ul>
+		      <form class="d-flex" role="search">
+      			<input class="form-control me-2" type="search" placeholder="Summon the Librarian" aria-label="Search" onkeyup="searchpreview()" onkeypress="enterkey()">
+      			<button class="btn btn-outline-light" type="submit" onclick="searchpage()">Search</button>
+    			</form>
+		    </div>
+		  </div>
+		</nav>
+		<!--breadcrumb-->
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="p-1">
+			<button class="btn btn-light btn-outline-warning float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="breadcrumb"><img src="img/layout/quickbrowsing.png" title="Quick browsing and breadcrumb" width="30"/></button>
+			<div class="offcanvas offcanvas-end"  data-bs-scroll="true"tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+			  <div class="offcanvas-header bg-dark text-light">
+			    <h4 class="offcanvas-title" id="offcanvasRightLabel">Quick browsing</h4>
+			    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			  </div>
+			  <div class="offcanvas-body">
+			  	<!-- levels: home - handbook/theme - section - rule -->
+			  	<h5>Browsing by:</h5>
+			    <ol class="breadcrumb">
+			    	<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				    <li class="breadcrumb-item"><a href="handbooks.html">Handbooks</a></li>
+				    <li class="breadcrumb-item" aria-current="page"><a href="RMFRP-ChLCaL.html">Character Law & Campaign Law</a></li>
+				    <li class="breadcrumb-item active" aria-current="page"><a href="RMFRP-ChLCaL-A02-05.html">Sets of rules</a></li>
+				</ol>
+			    <ol class="breadcrumb">
+			    	<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				    <li class="breadcrumb-item"><a href="themes.html">Themes</a></li>
+				    <li class="breadcrumb-item active" aria-current="page"><a href="themes-general.html">General rules</a></li>
+				  </ol>
+				  <a class="btn btn-outline-dark d-block m-1" href="advsearch.html">Search through the catalogue</a>
+				  <h5>Current page index</h5>
+				  <ol class="index-aside">
+				  	<li><a href="#1"><cite>Character Law</cite></a></li>
+				  	<li><a href="#2"><cite>Campaign Law</cite></a></li>
+				  	<li><a href="#3"><cite>Arms Law & Claw Law</cite></a></li>
+				  	<li><a href="#4"><cite>Spell Law</cite></a></li>
+				  </ol>
+				  <h5>Correlated content</h5>
+				  <ul>
+				  	<li><a href="#">...</a></li>
+				  	<li><a href="#">...</a></li>
+				  	<li><a href="#">...</a></li>
+				  </ul>
+			  </div>
+			</div>		
+		</nav>
+		<section>
+			<div class="container">
+				<div class="row p-1">
+					<div class="col title bg-light border border-dark">
+						<h1>Character Law & Campaign Law</h1>
+					</div>
+				</div>
+				<div class="row p-1">
+					<div class="col bg-light border border-dark p-1">
+						<h2>2.0 <cite>Character Law</cite></h2>
+						<span id="1"></span>
+						<p><a href="RMFRP-ChLCaL.html#ind-2"><cite>Character Law</cite></a> is a set of rules and guidelines for generating, developing, maintaining, and detailing the capabilities of characters to be used in a fantasy role playing environment. The details of the <cite><abbr title="Character Law">ChL</abbr></cite> rules will not be covered here because <cite><abbr title="Character Law">ChL</abbr></cite> is included in this book. A complete discussion of the key features of <cite><abbr title="Character Law">ChL</abbr></cite> can be found in <cite><abbr title="Character Law">ChL</abbr></cite> Sections <a href="RMFRP-ChLCaL-B01.html">1.0</a> and <a href="RMFRP-ChLCaL-B01.html#1.1">1.1</a>.</p>
+						<h2>3.0 <cite>Campaign Law</cite></h2>
+						<span id="2"></span>
+						<p><a href="RMFRP-ChLCaL.html#ind-3"><cite>Campaign Law</cite></a> is an aid for those who wish to create and employ an alternate world setting for their fantasy role playing game. It is designed to give Gamemasters an idea of the essential elements of a fantasy realm, and provides ways to develop a rich, consistent foundation upon which to build as their campaign progresses. The details of the <cite><abbr title="Spell Law">CaL</abbr></cite> guidelines will not be covered here because <cite><abbr title="Spell Law">CaL</abbr></cite> is included in this book. A complete discussion of the key features of <cite><abbr title="Spell Law">CaL</abbr></cite> can be found in <cite><abbr title="Spell Law">CaL</abbr></cite> Section <a href="RMFRP-ChLCaL-C01.html">1.0</a>.</p>
+						<h2>4.0 <cite>Arms Law & Claw Law</cite></h2>
+						<span id="3"></span>
+						<p><a href="RMFRP-ArLClL.html"><cite>Arms Law & Claw Law</cite></a> (<cite><abbr title="Arms Law & Claw Law">AL&CL</abbr></cite>) is a detailed combat system covering the mechanics of weapon attacks, animal attacks, martial arts attacks, moving maneuvers, fumbles, and critical strikes. It has been designed to provide a logical, detailed, manageable procedure for resolving combat between individuals and small groups. <cite><abbr title="Arms Law & Claw Law">AL&CL</abbr></cite> also provides a tactical sequence to be followed when resolving melees involving from 2 to 30 combatants. It integrates spell casting, missile fire, maneuvers, melee, and opportunity action.</p> 
+						<p>This combat system provides 30 weapon attack tables, each of which integrates the strengths and weaknesses of one specific weapon versus 20 different armor types. Additional guidelines are given for dozens of other weapons. <cite><abbr title="Arms Law & Claw Law">AL&CL</abbr></cite> also provides animal attack tables and martial arts attack tables which handle all kinds of unarmed attacks. To handle specific, detailed occurrences during combat, <cite><abbr title="Arms Law & Claw Law">AL&CL</abbr></cite> includes a moving maneuver table, a fumble table, and 5 critical strike tables.</p> 
+						<p>When using <cite><abbr title="Arms Law & Claw Law">AL&CL</abbr></cite>, any one attack can be resolved by making a single roll, adding any appropriate modifications, and cross-indexing the result on the appropriate attack table. If the attack is especially poor, a second roll may be required on a "fumble" table; if on the other hand the attack is especially effective, a second roll may be required on a critical table to determine specific damage. A player may kill or be killed with a single swing. Provisions are made for specific damages, such as the loss of an eye or limb, and for the results of such damage to the player, ranging from stunned inactivity to instant death.</p>
+						<h2>5.0 <cite>Spell Law</cite></h2>
+						<span id="4"></span>
+						<p><a href="RMFRP-SpL.html"><cite>Spell Law</cite></a> (<cite><abbr title="Spell Law">SL</abbr>) deals with the integration of spells and magic into a fantasy role playing environment. It provides characters with a wide variety of spell using options. Each spell user is allowed to "know" a relatively large number of spells, but usually he can only cast a few in a given time frame. Real skill in play is emphasized, since the choice of a spell and its application to a given situation become the key elements of success. To this end, <cite><abbr title="Spell Law">SL</abbr></cite> describes over 2000 spells, organized into three "realms of power" and keyed to 15 different professions.</p> 
+						<p>The spells in <cite><abbr title="Spell Law">SL</abbr></cite> are organized into "spell lists", each of which consists of spells which are related in function or base application. A spell user becomes able to cast new spells by "learning" an entire spell list of related spells, not by learning individual spells. Normally, a spell user will not immediately be able to cast all of the spells on a list he has just learned. Higher level spells on such a list will only become tastable as the spell user increases his experi-ence, knowledge and efficiency by using the lower level spells on the same list.</p> 
+						<P>Spell lists are grouped into categories based upon professions and realms of power (Channeling, Essence, and Mentalism). There are 162 spell lists divided into: 15 sets of professional "base" spell lists (i.e., spell lists learnable only by characters in that profession), 3 sets of "open" spell lists (one set for each realm of power), 3 sets of "closed" spell lists, and 3 sets of "evil" spell lists.</p>
+					</div>
+				</div>
+			</div>
+			<div class="nav-arrows">
+				<a href="RMFRP-ChLCaL-A01.html"><button class="nav-arrows" title="Go to the previous page"><img src="img/layout/left.png"/></button></a>
+				<a href="RMFRP-ChLCaL-A06.html"><button class="nav-arrows" title="Go to the next page"><img src="img/layout/right.png"/></button></a>
+			</div>	
+		</section>
+		<a href="#top"><button id="backtotop"  title="Go to top"><img width="30" src="img/layout/top.png"/></button></a>
+		<footer>
+			<div class="container-fluid bg-dark border-top border-warning text-center p-1">
+				<div class="row">
+					<div class="col-auto m-auto text-light">
+						<p><img class="cc" src="img/layout/cc.png" alt="CC-BY-NC-SA" title="CC-BY-NC-SA"/> Davide Perfetti, 2024</p>
+						<h5>Credits</h5>
+						<p><a href="https://www.flaticon.com/free-icons/arrows" title="arrows icons">Arrows icons created by Arslan Haider - Flaticon</a></p>
+						<p><a href="https://www.flaticon.com/free-icons/rules" title="rules icons">Navbar icon created by Freepik - Flaticon</a></p>
+						<p><a href="https://www.flaticon.com/free-icons/70-20-10-rule" title="70 20 10 rule icons">Side menu icon created by Freepik - Flaticon</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
